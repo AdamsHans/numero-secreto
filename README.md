@@ -1,69 +1,45 @@
-🎮 Jogo do Número Secreto
-Um jogo simples onde você precisa adivinhar um número secreto entre 1 e 10. O jogo fornece dicas (maior ou menor) a cada tentativa e conta quantas vezes você tentou até acertar.
+# 🎮 Jogo do Número Secreto
 
-▶️ Como Jogar
-O jogo gera automaticamente um número secreto entre 1 e 10.
+Um jogo interativo onde você deve adivinhar o número secreto entre 1 e 10. O sistema fornece dicas em tempo real e contabiliza suas tentativas até o acerto!
 
-Digite seu palpite no campo de entrada e clique em "Chutar".
+---
 
-O jogo dirá se o número secreto é maior ou menor que seu chute.
+## ▶️ Como Jogar
 
-Continue tentando até acertar!
+1. O sistema gera automaticamente um número secreto entre 1 e 10.  
+2. Digite seu palpite e clique em **"Chutar"**.  
+3. Você receberá uma dica se o número secreto é **maior ou menor**.  
+4. Continue tentando até acertar! O sistema mostrará seu número de tentativas.  
+5. Clique em **"Reiniciar Jogo"** para começar uma nova partida.
 
-Quando descobrir, você verá quantas tentativas foram necessárias.
+---
 
-Clique em "Reiniciar jogo" para jogar novamente.
+## ✨ Recursos
 
-✨ Funcionalidades
-Voz sintetizada (usando ResponsiveVoice) para ler as dicas e mensagens.
+- 🗣️ **Dicas por voz** (usando `ResponsiveVoice`)
+- 🔁 **Tentativas com plural inteligente** (ex: “1 tentativa” / “3 tentativas”)
+- 🔢 **Evita repetição de números** até que todos sejam sorteados
+- ♻️ **Botão de reinício** para recomeçar o jogo rapidamente
 
-Contador de tentativas com pluralização inteligente ("1 tentativa" vs "X tentativas").
+---
 
-Sistema anti-repetição que evita números repetidos até que todos sejam sorteados.
+## 🛠️ Tecnologias Utilizadas
 
-Design responsivo para melhor experiência.
+- **JavaScript** – lógica principal do jogo  
+- **HTML** – estrutura da interface  
+- **ResponsiveVoice.js** – síntese de voz integrada
 
-🛠️ Tecnologias Usadas
-JavaScript (lógica do jogo)
+---
 
-HTML (estrutura básica)
+📌 Requisitos
+Conexão com a internet (necessária para o funcionamento da voz)
 
-CSS (estilo mínimo - não incluso neste arquivo)
+---
 
-ResponsiveVoice.js (para síntese de voz)
+## 📝 Personalização
 
-🔄 Reiniciar o Jogo
-Clique no botão "Reiniciar jogo" para:
+No código JavaScript, você pode facilmente alterar comportamentos e mensagens:
 
-Gerar um novo número secreto
-
-Zerar o contador de tentativas
-
-Limpar o campo de entrada
-
-📝 Código Explicado
-gerarNumeroAleatorio(): Cria números únicos até todos os possíveis serem usados
-
-verificarChute(): Compara o chute com o número secreto e dá feedback
-
-exibirTextoNaTela(): Mostra mensagens na tela + fala (acessibilidade)
-
-Divirta-se! 🎉
-
-(Para testar: abra o console e veja a lista de números já sorteados!)
-
-Desenvolvido com JavaScript puro - pode ser integrado a qualquer projeto web básico.
-
-Quer personalizar? Você pode:
-
-Alterar numeroLimite para aumentar/diminuir a dificuldade
-
-Modificar as mensagens em exibirMensagemInicial()
-
-Trocar a voz (veja docs ResponsiveVoice)
-
-Créditos: Desenvolvedor independente (seu nome aqui 😉)
-
-📌 Nota: Requer conexão com internet para síntese de voz funcionar.
-
-Esse README está no formato Markdown (.md) e pode ser usado diretamente no GitHub ou em documentações. Quer adicionar/remover algo? Só editar!
+```javascript
+let numeroLimite = 15; // Aumenta a dificuldade
+exibirTextoNaTela('h1', 'Novo Título'); // Altera o título da página
